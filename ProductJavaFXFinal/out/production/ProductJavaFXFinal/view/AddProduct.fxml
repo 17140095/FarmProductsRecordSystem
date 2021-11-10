@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="402.0" spacing="5.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="362.0" styleClass="header" stylesheets="@../model/MainStyle.css">
+         <children>
+            <Label fx:id="addProductLabel" styleClass="header-label" stylesheets="@../model/MainStyle.css" text="Add New Product">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="362.0">
+         <children>
+            <Label prefWidth="100.0" text="Name: " />
+            <TextField fx:id="nameTextField" promptText="Name of product" stylesheets="@../model/MainStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="98.0" prefHeight="39.0" prefWidth="362.0">
+         <children>
+            <Label prefWidth="100.0" text="Category: " />
+            <ComboBox fx:id="categoryComboBox" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Select Category" stylesheets="@../model/MainStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="98.0" prefHeight="39.0" prefWidth="362.0">
+         <children>
+            <Label prefWidth="100.0" text="Special (if): " />
+            <RadioButton fx:id="specialNoRadioButton" mnemonicParsing="false" onAction="#noRadioButtonAction" selected="true" stylesheets="@../model/MainStyle.css" text="No">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggle" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="specialYesRadioButton" layoutX="110.0" layoutY="33.0" mnemonicParsing="false" onAction="#yesRadioButtonAction" stylesheets="@../model/MainStyle.css" text="Yes" toggleGroup="$toggle">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <TextField fx:id="specialTextField" disable="true" promptText="Enter Special Category" stylesheets="@../model/MainStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="232.0" prefHeight="67.0" prefWidth="560.0">
+         <children>
+            <Button fx:id="saveButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SaveButtonAction" prefWidth="200.0" stylesheets="@../model/MainStyle.css" text="Save" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
