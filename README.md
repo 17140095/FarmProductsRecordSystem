@@ -14,7 +14,7 @@ This is an Farm Product Record Keeping System. The GUI is well responsive. JavaF
 3. Scene Builder
 4. JavaFX - CSS
 
-##Screenshots
+## Screenshots
 ![This is an image](/1.jpg)
 ![This is an image](/2.jpg)
 ![This is an image](/3.jpg)
